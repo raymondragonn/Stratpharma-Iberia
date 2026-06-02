@@ -1,0 +1,197 @@
+import { useState, useEffect, useRef } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import { productsBySlug, buildGalleryItems, type ProductGalleryItem } from '../../../data/products'
+import './ProductDetail.scss'
+
+export default function ProductDetail() {
+  const { slug } = useParams<{ slug: string }>()
+  const product = slug ? productsBySlug[slug] ?? null : null
+
+  const [galleryItems, setGalleryItems] = useState<ProductGalleryItem[]>([])
+  const [currentItem, setCurrentItem] = useState<ProductGalleryItem | null>(null)
+  const [isPaused, setIsPaused] = useState(false)
+  const currentIndexRef = useRef(0)
+
+  useEffect(() => {
+    if (product) {
+      const items = buildGalleryItems(product)
+      setGalleryItems(items)
+      setCurrentItem(items[0] ?? null)
+      currentIndexRef.current = 0
+    } else {
+      setGalleryItems([])
+      setCurrentItem(null)
+      currentIndexRef.current = 0
+    }
+  }, [product])
+
+  useEffect(() => {
+    if (galleryItems.length <= 1 || isPaused) return
+    const interval = setInterval(() => {
+      currentIndexRef.current = (currentIndexRef.current + 1) % galleryItems.length
+      setCurrentItem(galleryItems[currentIndexRef.current])
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [galleryItems, isPaused])
+
+  const selectItem = (item: ProductGalleryItem, index: number) => {
+    currentIndexRef.current = index
+    setCurrentItem(item)
+    setIsPaused(true)
+    setTimeout(() => setIsPaused(false), 6000)
+  }
+
+  const isCurrentItem = (item: ProductGalleryItem) => {
+    if (!currentItem) return false
+    if (item.type !== currentItem.type) return false
+    return item.type === 'sheet'
+      ? item.pdfSrc === currentItem.pdfSrc
+      : item.src === currentItem.src
+  }
+
+  if (!product) {
+    return (
+      <section className="product-detail">
+        <div className="product-detail__content product-detail__not-found-wrap">
+          <div className="product-detail__not-found">
+            {!slug
+              ? <p>Selecciona un producto desde la landing para ver su información.</p>
+              : <p>No hay información disponible para este producto.</p>
+            }
+            <Link to="/" className="product-detail__btn">Volver a la landing</Link>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  const isSheet = currentItem?.type === 'sheet'
+  const currentMainImage = currentItem?.src ?? ''
+  const titleNoMark = product.content.title.replace('®', '')
+  const hasMark = product.content.title.includes('®')
+
+  return (
+    <section className="product-detail">
+      <div className="product-detail__content">
+        <div className="product-detail__content-inner">
+          <div className="product-detail__grid">
+            {/* Columna izquierda: imágenes */}
+            <div className="product-detail__images">
+              {!isSheet ? (
+                <a
+                  className="product-detail__main-image-link"
+                  href={product.shopUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Comprar ${product.content.title}`}
+                >
+                  <div className="product-detail__main-image-card">
+                    <img
+                      src={currentMainImage || product.mainImage}
+                      alt={product.content.title}
+                      decoding="async"
+                    />
+                  </div>
+                </a>
+              ) : (
+                <a
+                  className="product-detail__main-image-link"
+                  href={currentItem?.pdfSrc}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Ver ficha técnica de ${product.content.title}`}
+                >
+                  <div className="product-detail__main-image-card product-detail__main-image-card--sheet">
+                    <div className="product-detail__pdf-preview">
+                      <img
+                        src={currentMainImage}
+                        alt={`Ficha técnica de ${product.content.title}`}
+                        decoding="async"
+                      />
+                      <span className="product-detail__pdf-open-indicator" aria-hidden="true">
+                        FICHA TÉCNICA
+                        <span className="product-detail__pdf-open-icon">
+                          <svg viewBox="0 0 24 24" focusable={false} aria-hidden="true">
+                            <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                            <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z" />
+                          </svg>
+                        </span>
+                      </span>
+                      <div className="product-detail__pdf-preview-overlay" aria-hidden="true">
+                        <span className="product-detail__pdf-preview-kicker">Ficha técnica</span>
+                        <span className="product-detail__pdf-preview-subtitle">{product.content.title}</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              )}
+
+              <div className="product-detail__thumbnails">
+                {galleryItems.map((item, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    className={`product-detail__thumb-card${item.type === 'sheet' ? ' product-detail__thumb-card--sheet' : ''}${isCurrentItem(item) ? ' is-active' : ''}`}
+                    onClick={() => selectItem(item, i)}
+                    aria-label={item.type === 'sheet'
+                      ? `Ver ficha técnica de ${product.content.title}`
+                      : `Ver imagen de ${product.content.title}`}
+                  >
+                    <img src={item.src} alt={item.label} loading="lazy" decoding="async" />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Columna derecha: info */}
+            <div className="product-detail__info">
+              <h1 className="product-detail__title">
+                {titleNoMark}
+                {hasMark && <sup className="product-detail__mark">®</sup>}
+              </h1>
+              {product.content.paragraphList.map((p, i) => (
+                <p key={i} className="product-detail__paragraph">{p.paragraph}</p>
+              ))}
+              {product.content.sanitaryLine && (
+                <p className="product-detail__sanitary-line">
+                  <span className="product-detail__sanitary-inner">
+                    <img
+                      className="product-detail__ce-img"
+                      src="/assets/img/products/ce-2797.png"
+                      alt="CE 2797"
+                      decoding="async"
+                    />
+                    <span className="product-detail__sanitary-text">
+                      {product.content.sanitaryLine}
+                    </span>
+                  </span>
+                </p>
+              )}
+              {product.content.highlightLine && (
+                <p className="product-detail__highlight">{product.content.highlightLine}</p>
+              )}
+              <div className="product-detail__cta">
+                <a
+                  href={product.infoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="product-detail__btn product-detail__btn--secondary"
+                >
+                  MÁS INFORMACIÓN
+                </a>
+                <a
+                  href={product.shopUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="product-detail__btn"
+                >
+                  COMPRAR PRODUCTO
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
