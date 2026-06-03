@@ -83,7 +83,7 @@ export const productsMap: Record<string, ProductDetailData> = {
       '/assets/img/products/strata-triz/imgi_78_ST-20-ES-Box-HighRes.jpg'
     ],
     shopUrl: 'https://es.stratpharma-shop.com/product-category/strata-triz/',
-    infoUrl: 'https://es.stratatriz.com',
+    infoUrl: '/strata-triz/info',
     technicalSheetUrl: SHEET_STRATA_TRIZ,
     technicalSheetPreviewImage: '/assets/img/products/strata-triz/strata-triz-sheet-preview.png',
     content: {
@@ -102,7 +102,7 @@ export const productsMap: Record<string, ProductDetailData> = {
       '/assets/img/products/stratamed/stratamed01.jpeg'
     ],
     shopUrl: 'https://es.stratpharma-shop.com/product-category/stratamed/',
-    infoUrl: 'https://stratamed.com',
+    infoUrl: '/stratamed/info',
     technicalSheetUrl: SHEET_STRATAMED,
     technicalSheetPreviewImage: '/assets/img/products/stratamed/stratamed-sheet-preview.png',
     content: {
@@ -121,7 +121,7 @@ export const productsMap: Record<string, ProductDetailData> = {
       '/assets/img/products/stratacel/stratacel00.jpeg'
     ],
     shopUrl: 'https://es.stratpharma-shop.com/product-category/stratacel/',
-    infoUrl: 'https://stratacel.com',
+    infoUrl: '/stratacel/info',
     technicalSheetUrl: SHEET_STRATACEL,
     technicalSheetPreviewImage: '/assets/img/products/stratacel/stratacel-sheet-preview.png',
     content: {
@@ -143,7 +143,7 @@ export const productsMap: Record<string, ProductDetailData> = {
       '/assets/img/products/stratamark/stratamark03.png'
     ],
     shopUrl: 'https://es.stratpharma-shop.com/product-category/stratamark/',
-    infoUrl: 'https://stratamark.net/',
+    infoUrl: '/stratamark/info',
     technicalSheetUrl: SHEET_STRATAMARK,
     technicalSheetPreviewImage: '/assets/img/products/stratamark/stratamark-sheet-preview.png',
     content: {
@@ -162,7 +162,7 @@ export const productsMap: Record<string, ProductDetailData> = {
       '/assets/img/products/strataxrt/strataxrt01.jpeg'
     ],
     shopUrl: 'https://es.stratpharma-shop.com/product-category/strataxrt/',
-    infoUrl: 'https://strataxrt.com',
+    infoUrl: '/strataxrt/info',
     technicalSheetUrl: SHEET_STRATAXRT,
     technicalSheetPreviewImage: '/assets/img/products/strataxrt/strataxrt-sheet-preview.png',
     content: {

@@ -10,9 +10,6 @@ interface FeatureCircle {
   linesAfterLink?: string[]
 }
 
-const introTextLead =
-  'Stratpharma, con sede en Basilea desde 2005, es una empresa global especializada en productos sanitarios. Nuestros equipos de primer nivel diseñan, desarrollan, fabrican y comercializan soluciones innovadoras que mejoran la calidad de vida de los '
-const introTextHighlight = 'pacientes en todo el mundo.'
 const featuresBackgroundImage = '/assets/img/image-two.png'
 
 const circles: FeatureCircle[] = [
@@ -27,8 +24,7 @@ export default function Features() {
     <section id="nosotros" className="features">
       <div className="features-intro">
         <p className="features-intro__text">
-          {introTextLead}<br />
-          {introTextHighlight}
+          Stratpharma, con sede en Madrid desde 2024, es una empresa especializada en <strong>PRODUCTOS SANITARIOS</strong>. Nuestros productos de primer nivel se fabrican y desarrollan con alta tecnología, soluciones innovadoras que curan la piel y mejoran la calidad de vida de los pacientes en todo el mundo <strong>en la mitad de tiempo</strong>.
         </p>
       </div>
 

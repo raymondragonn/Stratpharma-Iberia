@@ -171,14 +171,23 @@ export default function ProductDetail() {
                 <p className="product-detail__highlight">{product.content.highlightLine}</p>
               )}
               <div className="product-detail__cta">
-                <a
-                  href={product.infoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="product-detail__btn product-detail__btn--secondary"
-                >
-                  MÁS INFORMACIÓN
-                </a>
+                {product.infoUrl.startsWith('/') ? (
+                  <Link
+                    to={product.infoUrl}
+                    className="product-detail__btn product-detail__btn--secondary"
+                  >
+                    MÁS INFORMACIÓN
+                  </Link>
+                ) : (
+                  <a
+                    href={product.infoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="product-detail__btn product-detail__btn--secondary"
+                  >
+                    MÁS INFORMACIÓN
+                  </a>
+                )}
                 <a
                   href={product.shopUrl}
                   target="_blank"

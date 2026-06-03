@@ -7,8 +7,8 @@ const navItems = [
 ]
 
 const bannerContent = {
-  subTitle: 'DESDE EL PRIMER DÍA',
-  title: 'CIENCIA QUE CURA TU PIEL',
+  subTitle: 'CURAMOS MEJOR TU PIEL EN LA MITAD DE TIEMPO',
+  title: 'CIENCIA CON ALTA TECNOLOGÍA',
   buttonText: 'VER PRODUCTOS',
   buttonFragment: 'productos'
 }

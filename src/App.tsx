@@ -5,6 +5,11 @@ import Navbar from './components/common/Navbar/Navbar'
 import Footer from './components/common/Footer/Footer'
 import Landing from './components/pages/Landing/Landing'
 import ProductDetail from './components/pages/ProductDetail/ProductDetail'
+import StrataTriz from './components/pages/Webs/StrataTriz/StrataTriz'
+import Stratamark from './components/pages/Webs/Stratamark/Stratamark'
+import Stratamed from './components/pages/Webs/Stratamed/Stratamed'
+import StrataXRT from './components/pages/Webs/StrataXRT/StrataXRT'
+import Stratacel from './components/pages/Webs/Stratacel/Stratacel'
 import './App.scss'
 
 function ScrollHandler() {
@@ -111,7 +116,14 @@ function AppLayout() {
 function App() {
   return (
     <BrowserRouter>
-      <AppLayout />
+      <Routes>
+        <Route path="/strata-triz/info" element={<StrataTriz />} />
+        <Route path="/stratamark/info" element={<Stratamark />} />
+        <Route path="/stratamed/info" element={<Stratamed />} />
+        <Route path="/strataxrt/info" element={<StrataXRT />} />
+        <Route path="/stratacel/info" element={<Stratacel />} />
+        <Route path="*" element={<AppLayout />} />
+      </Routes>
     </BrowserRouter>
   )
 }
