@@ -144,7 +144,7 @@ export default function Stratamed() {
       <section className="sd-buy">
         <div className="sd-buy__inner">
           <h2 className="sd-buy__title">Dónde comprar</h2>
-          <a href="https://es.stratpharma-shop.com/product-category/stratamed/" className="sd-btn sd-btn--lg" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.farmavazquez.com/stratamed-5-g-605796.html" className="sd-btn sd-btn--lg" target="_blank" rel="noopener noreferrer">
             Comprar Online
           </a>
         </div>

@@ -237,7 +237,7 @@ export default function Stratamark() {
       <section className="sm-buy">
         <div className="sm-buy__inner">
           <h2 className="sm-buy__title">Dónde comprar</h2>
-          <a href="https://es.stratpharma-shop.com/product-category/stratamark/" className="sm-btn sm-btn--lg" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.farmavazquez.com/stratamark-5951" className="sm-btn sm-btn--lg" target="_blank" rel="noopener noreferrer">
             Comprar online
           </a>
         </div>

@@ -47,7 +47,7 @@
   line-height: 1.2;
 }
 
-.top-header__logo-img {
+.navbar .top-header__logo-img {
   display: block;
   height: 5.25rem;
   width: auto;
@@ -231,7 +231,7 @@
     gap: 0.5rem;
   }
 
-  .top-header__logo-img {
+  .navbar .top-header__logo-img {
     height: 3.5rem;
     max-width: 260px;
   }
@@ -248,7 +248,7 @@
 }
 
 @media only screen and (max-width: 374px) {
-  .top-header__logo-img {
+  .navbar .top-header__logo-img {
     height: 2.8rem;
     max-width: 200px;
   }
@@ -276,7 +276,7 @@
     gap: 0.35rem;
   }
 
-  .top-header__logo-img {
+  .navbar .top-header__logo-img {
     height: 2.65rem;
     max-width: min(52vw, 280px);
   }

@@ -126,7 +126,7 @@ export default function StrataXRT() {
       <section className="sx-buy">
         <div className="sx-buy__inner">
           <h2 className="sx-buy__title">Dónde comprar</h2>
-          <a href="https://es.stratpharma-shop.com/product-category/strataxrt/" className="sx-btn sx-btn--lg" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.farmavazquez.com/strataxrt-20-g-601094.html" className="sx-btn sx-btn--lg" target="_blank" rel="noopener noreferrer">
             Comprar Online
           </a>
         </div>

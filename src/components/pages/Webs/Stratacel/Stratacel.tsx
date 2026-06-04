@@ -199,7 +199,7 @@ export default function Stratacel() {
       <section className="sc-buy">
         <div className="sc-buy__inner">
           <h2 className="sc-buy__title">Dónde comprar</h2>
-          <a href="https://es.stratpharma-shop.com/product-category/stratacel/" className="sc-btn sc-btn--lg" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.farmavazquez.com/stratacel-10-g-601092.html" className="sc-btn sc-btn--lg" target="_blank" rel="noopener noreferrer">
             Comprar Online
           </a>
         </div>

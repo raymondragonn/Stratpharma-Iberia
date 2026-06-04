@@ -176,7 +176,7 @@ export default function StrataTriz() {
       <section className="st-buy">
         <div className="st-buy__inner">
           <h2 className="st-buy__title">Dónde comprar</h2>
-          <a href="https://es.stratpharma-shop.com/product-category/strata-triz/" className="st-btn st-btn--lg" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.farmavazquez.com/comprar-strata-triz-5962" className="st-btn st-btn--lg" target="_blank" rel="noopener noreferrer">
             Comprar Online
           </a>
           <p className="st-buy__note">*Consulte el prospecto de información al paciente</p>
