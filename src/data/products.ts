@@ -31,9 +31,7 @@ export interface ProductGalleryItem {
 }
 
 const SHEET_STRATA_TRIZ   = '/assets/img/products/strata-triz/Strata-triz%20Detail%20Aid%20Spain_ST-ES-012-2-0225_Lowres.pdf';
-const SHEET_STRATAMED     = '/assets/img/products/stratamed/Stratamed%20Detail%20Aid_SM-ES-028-3-0824_LowRes.pdf';
 const SHEET_STRATACEL     = '/assets/img/products/stratacel/Stratacel%20Detail%20Aid%20ES_SC-ES-013-2-0324_LowRes.pdf';
-const SHEET_STRATAMARK    = '/assets/img/products/stratamark/Stratamark_Detail_Aid_ES_SK-ES-020-2-0824_lowRe.pdf';
 const SHEET_STRATAXRT     = '/assets/img/products/strataxrt/StrataXRT_Detail_Aid_Spain_SX-ES-010-2-1024_LowRes.pdf';
 
 export const productCards: ProductCardData[] = [
@@ -77,15 +75,14 @@ export const productCards: ProductCardData[] = [
 
 export const productsMap: Record<string, ProductDetailData> = {
   '1': {
-    mainImage: '/assets/img/products/strata-triz/imgi_44_ST-5-ES-Box-HighRes.jpg',
+    mainImage: '/assets/img/products/strata-triz/imagenes stratpharma_Mesa de trabajo 1 copia 3.png',
     thumbnails: [
-      '/assets/img/products/strata-triz/imgi_46_ST-5-ES-Tube-HighRes.jpg',
-      '/assets/img/products/strata-triz/imgi_78_ST-20-ES-Box-HighRes.jpg'
+      '/assets/img/products/strata-triz/imagenes stratpharma_Mesa de trabajo 1 copia 6.png',
+      '/assets/img/products/strata-triz/imagenes stratpharma_Mesa de trabajo 1 copia 2.png',
+      '/assets/img/products/strata-triz/4.jpg'
     ],
-    shopUrl: 'https://es.stratpharma-shop.com/product-category/strata-triz/',
+    shopUrl: 'https://www.farmavazquez.com/comprar-strata-triz-5962',
     infoUrl: '/strata-triz/info',
-    technicalSheetUrl: SHEET_STRATA_TRIZ,
-    technicalSheetPreviewImage: '/assets/img/products/strata-triz/strata-triz-sheet-preview.png',
     content: {
       title: 'STRATA-TRIZ®',
       paragraphList: [
@@ -96,15 +93,15 @@ export const productsMap: Record<string, ProductDetailData> = {
     }
   },
   '2': {
-    mainImage: '/assets/img/products/stratamed/stratamed00.jpeg',
+    mainImage: '/assets/img/products/stratamed/imagenes stratpharma_Mesa de trabajo 1 copia 7.png',
     thumbnails: [
-      '/assets/img/products/stratamed/stratamed00.jpeg',
-      '/assets/img/products/stratamed/stratamed01.jpeg'
+      '/assets/img/products/stratamed/imagenes stratpharma_Mesa de trabajo 1 copia 7.png',
+      '/assets/img/products/stratamed/imagenes stratpharma_Mesa de trabajo 1 copia 5.png',
+      '/assets/img/products/stratamed/imagenes stratpharma_Mesa de trabajo 1 copia 12.png',
+      '/assets/img/products/stratamed/12.jpg'
     ],
-    shopUrl: 'https://es.stratpharma-shop.com/product-category/stratamed/',
+    shopUrl: 'https://www.farmavazquez.com/stratamed-5-g-605796.html',
     infoUrl: '/stratamed/info',
-    technicalSheetUrl: SHEET_STRATAMED,
-    technicalSheetPreviewImage: '/assets/img/products/stratamed/stratamed-sheet-preview.png',
     content: {
       title: 'STRATAMED®',
       paragraphList: [
@@ -116,14 +113,14 @@ export const productsMap: Record<string, ProductDetailData> = {
     }
   },
   '3': {
-    mainImage: '/assets/img/products/stratacel/stratacel00.jpeg',
+    mainImage: '/assets/img/products/stratacel/imagenes stratpharma_Mesa de trabajo 1 copia 11.png',
     thumbnails: [
-      '/assets/img/products/stratacel/stratacel00.jpeg'
+      '/assets/img/products/stratacel/imagenes stratpharma_Mesa de trabajo 1 copia 11.png',
+      '/assets/img/products/stratacel/imagenes stratpharma_Mesa de trabajo 1 copia 10.png',
+      '/assets/img/products/stratacel/8.jpg'
     ],
-    shopUrl: 'https://es.stratpharma-shop.com/product-category/stratacel/',
+    shopUrl: 'https://www.farmavazquez.com/stratacel-10-g-601092.html',
     infoUrl: '/stratacel/info',
-    technicalSheetUrl: SHEET_STRATACEL,
-    technicalSheetPreviewImage: '/assets/img/products/stratacel/stratacel-sheet-preview.png',
     content: {
       title: 'STRATACEL®',
       paragraphList: [
@@ -135,17 +132,16 @@ export const productsMap: Record<string, ProductDetailData> = {
     }
   },
   '4': {
-    mainImage: '/assets/img/products/stratamark/stratamark00.jpg',
+    mainImage: '/assets/img/products/stratamark/stratamark01.jpg',
     thumbnails: [
-      '/assets/img/products/stratamark/stratamark00.jpg',
       '/assets/img/products/stratamark/stratamark01.jpg',
       '/assets/img/products/stratamark/stratamark02.jpg',
-      '/assets/img/products/stratamark/stratamark03.png'
+      '/assets/img/products/stratamark/stratamark03.png',
+      '/assets/img/products/stratamark/8.jpg',
+      '/assets/img/products/stratamark/roll-up.png'
     ],
-    shopUrl: 'https://es.stratpharma-shop.com/product-category/stratamark/',
+    shopUrl: 'https://www.farmavazquez.com/stratamark-5951',
     infoUrl: '/stratamark/info',
-    technicalSheetUrl: SHEET_STRATAMARK,
-    technicalSheetPreviewImage: '/assets/img/products/stratamark/stratamark-sheet-preview.png',
     content: {
       title: 'STRATAMARK®',
       paragraphList: [
@@ -161,7 +157,7 @@ export const productsMap: Record<string, ProductDetailData> = {
       '/assets/img/products/strataxrt/imgi_44_SX20EX00TubeBoxLowRes.jpg',
       '/assets/img/products/strataxrt/strataxrt01.jpeg'
     ],
-    shopUrl: 'https://es.stratpharma-shop.com/product-category/strataxrt/',
+    shopUrl: 'https://www.farmavazquez.com/strataxrt-20-g-601094.html',
     infoUrl: '/strataxrt/info',
     technicalSheetUrl: SHEET_STRATAXRT,
     technicalSheetPreviewImage: '/assets/img/products/strataxrt/strataxrt-sheet-preview.png',

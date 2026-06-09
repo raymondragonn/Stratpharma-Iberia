@@ -10,6 +10,7 @@ export default function ProductDetail() {
   const [galleryItems, setGalleryItems] = useState<ProductGalleryItem[]>([])
   const [currentItem, setCurrentItem] = useState<ProductGalleryItem | null>(null)
   const [isPaused, setIsPaused] = useState(false)
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null)
   const currentIndexRef = useRef(0)
 
   useEffect(() => {
@@ -67,6 +68,7 @@ export default function ProductDetail() {
 
   const isSheet = currentItem?.type === 'sheet'
   const currentMainImage = currentItem?.src ?? ''
+  const isZoomable = (currentMainImage || product.mainImage).endsWith('/roll-up.png')
   const titleNoMark = product.content.title.replace('®', '')
   const hasMark = product.content.title.includes('®')
 
@@ -78,21 +80,38 @@ export default function ProductDetail() {
             {/* Columna izquierda: imágenes */}
             <div className="product-detail__images">
               {!isSheet ? (
-                <a
-                  className="product-detail__main-image-link"
-                  href={product.shopUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Comprar ${product.content.title}`}
-                >
-                  <div className="product-detail__main-image-card">
-                    <img
-                      src={currentMainImage || product.mainImage}
-                      alt={product.content.title}
-                      decoding="async"
-                    />
-                  </div>
-                </a>
+                <div className="product-detail__main-image-wrap">
+                  <a
+                    className="product-detail__main-image-link"
+                    href={product.shopUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Comprar ${product.content.title}`}
+                  >
+                    <div className="product-detail__main-image-card">
+                      <img
+                        src={currentMainImage || product.mainImage}
+                        alt={product.content.title}
+                        decoding="async"
+                      />
+                    </div>
+                  </a>
+                  {isZoomable && (
+                    <button
+                      type="button"
+                      className="product-detail__zoom-btn"
+                      onClick={() => setLightboxImage(currentMainImage || product.mainImage)}
+                      aria-label={`Ampliar imagen de ${product.content.title}`}
+                    >
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" focusable={false} aria-hidden="true">
+                        <circle cx="11" cy="11" r="7" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        <line x1="11" y1="8" x2="11" y2="14" />
+                        <line x1="8" y1="11" x2="14" y2="11" />
+                      </svg>
+                    </button>
+                  )}
+                </div>
               ) : (
                 <a
                   className="product-detail__main-image-link"
@@ -201,6 +220,35 @@ export default function ProductDetail() {
           </div>
         </div>
       </div>
+
+      {lightboxImage && (
+        <div
+          className="product-detail__lightbox"
+          onClick={() => setLightboxImage(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Imagen ampliada de ${product.content.title}`}
+        >
+          <button
+            type="button"
+            className="product-detail__lightbox-close"
+            onClick={() => setLightboxImage(null)}
+            aria-label="Cerrar imagen ampliada"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" focusable={false} aria-hidden="true">
+              <line x1="6" y1="6" x2="18" y2="18" />
+              <line x1="18" y1="6" x2="6" y2="18" />
+            </svg>
+          </button>
+          <img
+            src={lightboxImage}
+            alt={product.content.title}
+            className="product-detail__lightbox-img"
+            decoding="async"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   )
 }

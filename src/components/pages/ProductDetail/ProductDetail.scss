@@ -72,6 +72,97 @@
   color: inherit;
 }
 
+.product-detail__main-image-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.product-detail__zoom-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #555;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+
+  svg { width: 18px; height: 18px; }
+
+  &:hover {
+    background: #fff;
+    color: var(--mainColor);
+    transform: scale(1.06);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(181, 47, 89, 0.35);
+    outline-offset: 2px;
+  }
+}
+
+.product-detail__lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(20, 20, 20, 0.86);
+  cursor: zoom-out;
+  animation: product-detail-lightbox-fade 160ms ease;
+}
+
+@keyframes product-detail-lightbox-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.product-detail__lightbox-img {
+  max-width: min(1100px, 92vw);
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 8px;
+  cursor: default;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.product-detail__lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+
+  svg { width: 20px; height: 20px; }
+
+  &:hover { background: rgba(255, 255, 255, 0.22); transform: scale(1.06); }
+
+  &:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.55);
+    outline-offset: 2px;
+  }
+}
+
 .product-detail__main-image-card {
   position: relative;
   width: 100%;
@@ -88,8 +179,8 @@
   box-sizing: border-box;
 
   img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     mix-blend-mode: multiply;
   }
@@ -143,8 +234,8 @@
   }
 
   img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     mix-blend-mode: multiply;
   }
