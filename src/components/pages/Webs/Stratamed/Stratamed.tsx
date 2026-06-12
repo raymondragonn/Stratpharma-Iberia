@@ -3,48 +3,7 @@ import './Stratamed.scss'
 import Navbar from '../../../common/Navbar/Navbar'
 import Footer from '../../../common/Footer/Footer'
 
-const A = '/assets/img/webs/stratamed'
 const P = '/assets/img/products/stratamed'
-
-const features = [
-  { title: 'Película flexible', desc: 'Apósito flexible y de contacto total que forma una fina película y garantiza contacto constante con la herida.' },
-  { title: 'Alivio sintomático', desc: 'Proporciona alivio del picor, quemazón e incomodidad, y reduce el enrojecimiento.' },
-  { title: 'Cicatrización rápida', desc: 'Favorece un entorno húmedo de cicatrización para una recuperación más rápida y menor tiempo de inactividad.' },
-  { title: 'Protección', desc: 'Protege la piel comprometida de agentes químicos y microbianos, reduciendo el riesgo de dermatitis de contacto.' },
-  { title: 'Prevención de cicatrices', desc: 'Permite que la prevención de cicatrices anormales comience de inmediato tras el procedimiento.' },
-  { title: 'Hidratación', desc: 'Semioclusivo, permite que la piel respire y se mantenga hidratada.' },
-  { title: 'Zonas difíciles', desc: 'Apto para zonas expuestas como cara y cuello, articulaciones y zonas con vello.' },
-  { title: 'No reactivo', desc: 'Inerte, sin pH medible, sin alcohol, parabenos ni fragancias.' },
-  { title: 'Fácil de aplicar', desc: 'Fácil de aplicar sin necesidad de retirar antes de reaplicar.' },
-  { title: 'Bacteriostático', desc: 'Reduce el riesgo de infección bacteriana en heridas y piel comprometida.' },
-]
-
-const medicalIndications = [
-  'Incisiones y escisiones quirúrgicas',
-  'Biopsias y electrodesecación',
-  'Cirugía general con suturas (Mohs, cesáreas)',
-  'Heridas crónicas (úlceras venosas, por presión, diabéticas)',
-  'Quemaduras de 1.er y 2.o grado',
-  'Traumatismos cutáneos',
-  'Criocirugía y dermoabrasión',
-  'Terapia post 5-FU',
-  'Tatuaje médico (post reconstrucción mamaria)',
-  'Afecciones inflamatorias de la piel',
-]
-
-const cosmeticIndications = [
-  'Procedimientos láser (ablativo de campo completo)',
-  'Terapia con plasma rico en plaquetas (PRP)',
-  'Peeling químico (medio y profundo)',
-  'Cirugía estética facial y corporal',
-  'Eliminación de tatuajes',
-  'Tatuaje cosmético y paramédico',
-]
-
-const videos = [
-  { id: 'PLKiMz4IdRhtc06cTIU1qvRb0u6I9-dx55', label: 'Opiniones de médicos', list: true },
-  { id: 'PLKiMz4IdRhtctu9cXlsDjPD1oIPlvjViX', label: 'Casos de éxito', list: true },
-]
 
 export default function Stratamed() {
   const [modalOpen, setModalOpen] = useState(false)

@@ -80,20 +80,23 @@
 
 .contact-section__item {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--blackColor);
+}
 
-  a {
-    color: var(--blackColor);
-    text-decoration: none;
+.contact-section__link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  color: var(--blackColor);
+  text-decoration: none;
+  cursor: pointer;
 
-    &:hover {
-      color: var(--mainColor);
-      text-decoration: underline;
-    }
+  &:hover .contact-section__link-text {
+    color: var(--mainColor);
+    text-decoration: underline;
   }
 }
 
@@ -192,11 +195,14 @@
 
   .contact-section__item {
     font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .contact-section__link {
     gap: 0.6rem;
     align-items: flex-start;
-    line-height: 1.35;
 
-    a {
+    .contact-section__link-text {
       word-break: break-word;
       overflow-wrap: anywhere;
     }

@@ -3,31 +3,65 @@ import './StrataXRT.scss'
 import Navbar from '../../../common/Navbar/Navbar'
 import Footer from '../../../common/Footer/Footer'
 
-const A = '/assets/img/webs/strataxrt'
+const HERO_BG = '/assets/img/products/strataxrt/38.jpg'
 
 const slides = [
   {
-    bg: `${A}/iStock-498200652.jpg`,
-    title: 'Para la prevención y el tratamiento\nde la dermatitis por radiación',
-    sub: 'StrataXRT reduce el dolor, el enrojecimiento y el calor, y ayuda a calmar las zonas de piel expuestas'
+    bg: HERO_BG,
+    title: 'Para la prevención y tratamiento\nde la dermatitis por radiación.',
+    pos: 'tl' as const
   },
   {
-    bg: `${A}/20151001-br2.jpg`,
-    title: 'Su apoyo durante\nla radioterapia',
-    sub: 'El apósito innovador para la dermatitis por radiación'
+    bg: HERO_BG,
+    title: 'StrataXRT reduce el dolor, enrojecimiento, calor\ny ayuda a calmar las áreas expuestas de la piel',
+    pos: 'tr' as const
   },
   {
-    bg: `${A}/20151019-0021.jpg`,
-    title: 'Apósito innovador\ny flexible',
-    sub: 'Forma una capa protectora que previene los síntomas tempranos de la dermatitis por radiación'
+    bg: HERO_BG,
+    title: 'Tu apoyo a lo largo\nde la radiación de terapia.',
+    pos: 'bl' as const
   }
 ]
 
 const features = [
-  { title: 'Prevención', desc: 'Forma una capa protectora que previene los síntomas tempranos de la dermatitis por radiación' },
-  { title: 'Tratamiento', desc: 'Favorece un entorno húmedo de cicatrización de la herida para una recuperación más rápida post-terapia' },
-  { title: 'Apósito innovador', desc: 'Apósito flexible que puede aplicarse durante todo el tratamiento de radioterapia' },
-  { title: 'Adición simple', desc: 'Para médicos que desean un complemento seguro y sencillo a los protocolos existentes de cuidado de heridas' }
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+        <path d="M12 6v6l4 2"/>
+        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+      </svg>
+    ),
+    label: 'Resistente al agua'
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="7" width="20" height="4" rx="2"/>
+        <rect x="4" y="13" width="16" height="4" rx="2"/>
+        <line x1="12" y1="3" x2="12" y2="7"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+    ),
+    label: 'Apósito flexible'
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+    ),
+    label: 'Alivio de síntomas'
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <polyline points="9 12 11 14 15 10"/>
+      </svg>
+    ),
+    label: 'Bacteriostático y no reactivo'
+  }
 ]
 
 export default function StrataXRT() {
@@ -47,15 +81,32 @@ export default function StrataXRT() {
         {slides.map((slide, i) => (
           <div key={i} className={`sx-hero__slide${i === activeSlide ? ' active' : ''}`}
             style={{ backgroundImage: `url(${slide.bg})` }}>
-            <div className="sx-hero__overlay" />
-            <div className="sx-hero__content">
+            <div className={`sx-hero__content sx-hero__content--${slide.pos}`}>
               <h1 className="sx-hero__title">
                 {slide.title.split('\n').map((l, j) => <span key={j}>{l}<br /></span>)}
               </h1>
-              <p className="sx-hero__sub">{slide.sub}</p>
             </div>
           </div>
         ))}
+        <button
+          className="sx-hero__arrow sx-hero__arrow--prev"
+          onClick={() => setActiveSlide(p => (p - 1 + slides.length) % slides.length)}
+          aria-label="Slide anterior"
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <button
+          className="sx-hero__arrow sx-hero__arrow--next"
+          onClick={() => setActiveSlide(p => (p + 1) % slides.length)}
+          aria-label="Siguiente slide"
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+
         <div className="sx-hero__dots">
           {slides.map((_, i) => (
             <button key={i} className={`sx-hero__dot${i === activeSlide ? ' active' : ''}`}
@@ -69,19 +120,15 @@ export default function StrataXRT() {
         <div className="sx-product__inner">
           <div className="sx-product__text">
             <h2 className="sx-product__heading">
-              El apósito innovador para la dermatitis por radiación<br />
-              <span>Su apoyo durante todo el tratamiento de radioterapia</span>
+              El innovador <span>apósito para heridas</span> para la dermatitis por la radiación
             </h2>
             <ul className="sx-product__list">
-              <li>Apósito innovador y flexible para heridas</li>
-              <li>Forma una capa protectora que previene los síntomas tempranos de la dermatitis por radiación</li>
-              <li>Favorece un entorno húmedo de cicatrización para una recuperación rápida post-terapia</li>
+              <li>Forma una capa protectora que previene y retrasa los primeros síntomas de la dermatitis</li>
+              <li>Ayuda a promover un ambiente de recuperación <strong>mucho más rápido después de la terapia, normalmente entre 10-15 días</strong></li>
             </ul>
-            <a href="#" className="sx-btn">Leer Más</a>
           </div>
           <div className="sx-product__imgs">
-            <img src={`${A}/SX-20-EX00-Tube-HighRes-1.png`} alt="StrataXRT 20g" className="sx-product__tube" />
-            <img src={`${A}/SX-50-EX00-Tube-HighRes3-1.png`} alt="StrataXRT 50g" className="sx-product__tube sx-product__tube--lg" />
+            <img src="/assets/img/products/strataxrt/imagenes stratpharma_Mesa de trabajo 1 copia 9.png" alt="StrataXRT" className="sx-product__img" />
           </div>
         </div>
       </section>
@@ -89,12 +136,12 @@ export default function StrataXRT() {
       {/* ── FEATURES ── */}
       <section className="sx-features">
         <div className="sx-features__inner">
-          <h2 className="sx-section-title">El apósito innovador para la <span>dermatitis por radiación</span></h2>
+          <h2 className="sx-section-title">Tu apoyo a lo largo del viaje de <span>radioterapia</span></h2>
           <div className="sx-features__grid">
             {features.map((f, i) => (
               <div key={i} className="sx-features__item">
-                <h3 className="sx-features__title">{f.title}</h3>
-                <p>{f.desc}</p>
+                <span className="sx-features__icon">{f.icon}</span>
+                <p>{f.label}</p>
               </div>
             ))}
           </div>
@@ -104,19 +151,19 @@ export default function StrataXRT() {
       {/* ── BEFORE / AFTER ── */}
       <section className="sx-ba">
         <div className="sx-ba__inner">
-          <h2 className="sx-section-title">Véalo <span>usted mismo</span></h2>
-          <p className="sx-ba__caption">
-            Mejora visible después de 19 días usando StrataXRT durante una radioterapia en curso.
-            El paciente fue diagnosticado con un carcinoma epidermoide avanzado de laringe.
-          </p>
-          <div className="sx-ba__imgs">
-            <div className="sx-ba__col">
-              <img src={`${A}/20151001-br2.jpg`} alt="Inicio del tratamiento" />
-              <span>Inicio</span>
+          <div className="sx-ba__cols">
+            <div className="sx-ba__text">
+              <h2 className="sx-ba__title">
+                <span className="sx-ba__title-line">Ver para</span>
+                <span className="sx-ba__title-line sx-ba__title-line--accent">Tú mismo</span>
+              </h2>
+              <p className="sx-ba__caption">
+                Mejora visible después de 19 días de uso de StrataXRT durante la radioterapia en curso.
+                El paciente fue diagnosticado con un carcinoma epidérmico avanzado de la laringe.
+              </p>
             </div>
-            <div className="sx-ba__col">
-              <img src={`${A}/20151019-0021.jpg`} alt="Día 19" />
-              <span>Día 19</span>
+            <div className="sx-ba__imgs">
+              <img src="/assets/img/products/strataxrt/antes-despues.png" alt="Antes y después del tratamiento con StrataXRT" />
             </div>
           </div>
         </div>
@@ -125,10 +172,21 @@ export default function StrataXRT() {
       {/* ── BUY ── */}
       <section className="sx-buy">
         <div className="sx-buy__inner">
-          <h2 className="sx-buy__title">Dónde comprar</h2>
-          <a href="https://www.farmavazquez.com/strataxrt-20-g-601094.html" className="sx-btn sx-btn--lg" target="_blank" rel="noopener noreferrer">
-            Comprar Online
-          </a>
+          <div className="sx-buy__cols">
+            <div className="sx-buy__text">
+              <h2 className="sx-buy__title">
+                <span className="sx-buy__title-line">Dónde</span>
+                <span className="sx-buy__title-line sx-buy__title-line--accent">comprar</span>
+              </h2>
+              <p className="sx-buy__lead">Disponible en 40 hospitales públicos españoles así como en los hospitales GenesisCare y Grupo Recoletas, y en todas las farmacias de España y Portugal.</p>
+              <a href="https://www.farmavazquez.com/strataxrt-20-g-601094.html" className="sx-btn sx-btn--lg" target="_blank" rel="noopener noreferrer">
+                Comprar Online
+              </a>
+            </div>
+            <div className="sx-buy__imgs">
+              <img src="/assets/img/products/strataxrt/imagenes stratpharma_Mesa de trabajo 1 copia 8.png" alt="StrataXRT gel apósito" />
+            </div>
+          </div>
         </div>
       </section>
 

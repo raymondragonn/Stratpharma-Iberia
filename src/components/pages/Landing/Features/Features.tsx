@@ -26,6 +26,9 @@ export default function Features() {
         <p className="features-intro__text">
           Stratpharma, con sede en Madrid desde 2024, es una empresa especializada en <strong>PRODUCTOS SANITARIOS</strong>. Nuestros productos de primer nivel se fabrican y desarrollan con alta tecnología, soluciones innovadoras que curan la piel y mejoran la calidad de vida de los pacientes en todo el mundo <strong>en la mitad de tiempo</strong>.
         </p>
+        <p className="features-intro__sub">
+          Con ciencia, investigación y alta tecnología, hemos desarrollado formulas exclusivas que hacen que curemos mejor la piel, y en la mitad de tiempo en el que lo hacen los tratamientos convencionales.
+        </p>
       </div>
 
       <div className="features-circles">

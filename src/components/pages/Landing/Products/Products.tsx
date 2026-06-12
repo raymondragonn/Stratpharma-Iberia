@@ -5,6 +5,11 @@ import './Products.scss'
 export default function Products() {
   return (
     <section id="productos" className="products-section">
+      <div className="products-section__disclaimer">
+        <p>Toda la información que vais a ver aquí está debidamente documentada y registrada en las tres principales Agencias de Salud Pública del mundo, lo que nos garantiza su veracidad.</p>
+        <img src="/assets/img/imagen-agencias.jpeg" alt="Agencias de Salud Pública" className="products-section__disclaimer-img" />
+      </div>
+
       <div className="products-section__banner">
         <h2 className="products-section__banner-title">NUESTROS PRODUCTOS</h2>
       </div>

@@ -30,9 +30,6 @@ export interface ProductGalleryItem {
   label: string;
 }
 
-const SHEET_STRATA_TRIZ   = '/assets/img/products/strata-triz/Strata-triz%20Detail%20Aid%20Spain_ST-ES-012-2-0225_Lowres.pdf';
-const SHEET_STRATACEL     = '/assets/img/products/stratacel/Stratacel%20Detail%20Aid%20ES_SC-ES-013-2-0324_LowRes.pdf';
-const SHEET_STRATAXRT     = '/assets/img/products/strataxrt/StrataXRT_Detail_Aid_Spain_SX-ES-010-2-1024_LowRes.pdf';
 
 export const productCards: ProductCardData[] = [
   {
@@ -155,12 +152,11 @@ export const productsMap: Record<string, ProductDetailData> = {
     mainImage: '/assets/img/products/strataxrt/imgi_44_SX20EX00TubeBoxLowRes.jpg',
     thumbnails: [
       '/assets/img/products/strataxrt/imgi_44_SX20EX00TubeBoxLowRes.jpg',
-      '/assets/img/products/strataxrt/strataxrt01.jpeg'
+      '/assets/img/products/strataxrt/strataxrt01.jpeg',
+      '/assets/img/products/strata-triz/4.jpg'
     ],
     shopUrl: 'https://www.farmavazquez.com/strataxrt-20-g-601094.html',
     infoUrl: '/strataxrt/info',
-    technicalSheetUrl: SHEET_STRATAXRT,
-    technicalSheetPreviewImage: '/assets/img/products/strataxrt/strataxrt-sheet-preview.png',
     content: {
       title: 'STRATAXRT®',
       paragraphList: [
