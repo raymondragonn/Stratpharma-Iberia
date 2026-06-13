@@ -467,11 +467,26 @@ $trans:   .35s ease;
   }
 
   &__imgs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__photo {
     img {
       display: block;
-      width: 92%;
+      width: 60%;
       margin: 0 auto;
     }
+  }
+
+  &__photo-label {
+    display: block;
+    margin-top: .5rem;
+    font-size: .85rem;
+    font-weight: 600;
+    color: $purple;
+    text-align: center;
   }
 }
 
@@ -1002,6 +1017,15 @@ $trans:   .35s ease;
 
       &:last-child { margin-bottom: 0; }
     }
+  }
+
+  &__prevention-text {
+    font-size: 14px;
+    color: $dgray;
+    line-height: 1.75;
+    margin: 0 0 .6rem;
+
+    &:last-child { margin-bottom: 0; }
   }
 
   &__prevention-note {

@@ -4,6 +4,7 @@ import Navbar from '../../../common/Navbar/Navbar'
 import Footer from '../../../common/Footer/Footer'
 
 const HERO_BG = '/assets/img/products/strataxrt/38.jpg'
+const A = '/assets/img/webs/strataxrt'
 
 const slides = [
   {
@@ -13,7 +14,7 @@ const slides = [
   },
   {
     bg: HERO_BG,
-    title: 'StrataXRT reduce el dolor, enrojecimiento, calor\ny ayuda a calmar las áreas expuestas de la piel',
+    title: 'StrataXRT reduce el dolor, enrojecimiento, calor\ny calma las áreas expuestas de la piel',
     pos: 'tr' as const
   },
   {
@@ -68,7 +69,7 @@ export default function StrataXRT() {
   const [activeSlide, setActiveSlide] = useState(0)
 
   useEffect(() => {
-    const t = setInterval(() => setActiveSlide(p => (p + 1) % slides.length), 5000)
+    const t = setInterval(() => setActiveSlide(p => (p + 1) % slides.length), 8000)
     return () => clearInterval(t)
   }, [])
 
@@ -129,6 +130,7 @@ export default function StrataXRT() {
           </div>
           <div className="sx-product__imgs">
             <img src="/assets/img/products/strataxrt/imagenes stratpharma_Mesa de trabajo 1 copia 9.png" alt="StrataXRT" className="sx-product__img" />
+            <img src="/assets/img/products/strataxrt/imagenes stratpharma_Mesa de trabajo 1 copia 8.png" alt="StrataXRT" className="sx-product__img" />
           </div>
         </div>
       </section>
@@ -154,7 +156,7 @@ export default function StrataXRT() {
           <div className="sx-ba__cols">
             <div className="sx-ba__text">
               <h2 className="sx-ba__title">
-                <span className="sx-ba__title-line">Ver para</span>
+                <span className="sx-ba__title-line">Míralo</span>
                 <span className="sx-ba__title-line sx-ba__title-line--accent">Tú mismo</span>
               </h2>
               <p className="sx-ba__caption">
@@ -163,7 +165,14 @@ export default function StrataXRT() {
               </p>
             </div>
             <div className="sx-ba__imgs">
-              <img src="/assets/img/products/strataxrt/antes-despues.png" alt="Antes y después del tratamiento con StrataXRT" />
+              <div className="sx-ba__photo">
+                <img src={`${A}/20151001-br2.jpg`} alt="Antes del tratamiento con StrataXRT" />
+                <span className="sx-ba__photo-label">Antes</span>
+              </div>
+              <div className="sx-ba__photo">
+                <img src={`${A}/20151019-0021.jpg`} alt="Después del tratamiento con StrataXRT" />
+                <span className="sx-ba__photo-label">Después</span>
+              </div>
             </div>
           </div>
         </div>
@@ -178,13 +187,14 @@ export default function StrataXRT() {
                 <span className="sx-buy__title-line">Dónde</span>
                 <span className="sx-buy__title-line sx-buy__title-line--accent">comprar</span>
               </h2>
-              <p className="sx-buy__lead">Disponible en 40 hospitales públicos españoles así como en los hospitales GenesisCare y Grupo Recoletas, y en todas las farmacias de España y Portugal.</p>
-              <a href="https://www.farmavazquez.com/strataxrt-20-g-601094.html" className="sx-btn sx-btn--lg" target="_blank" rel="noopener noreferrer">
+              <p className="sx-buy__lead">Disponible en 40 hospitales públicos españoles así como en los hospitales GenesisCare y Grupo Recoletas, en todas las farmacias de España, y muy pronto en Portugal.</p>
+              <a href="https://www.farmavazquez.com/buscar?controller=search&orderby=position&orderway=desc&search_query=strataxrt&submitsearch=Search" className="sx-btn sx-btn--lg" target="_blank" rel="noopener noreferrer">
                 Comprar Online
               </a>
             </div>
             <div className="sx-buy__imgs">
               <img src="/assets/img/products/strataxrt/imagenes stratpharma_Mesa de trabajo 1 copia 8.png" alt="StrataXRT gel apósito" />
+              <img src="/assets/img/products/strataxrt/imagenes stratpharma_Mesa de trabajo 1 copia 9.png" alt="StrataXRT" />
             </div>
           </div>
         </div>

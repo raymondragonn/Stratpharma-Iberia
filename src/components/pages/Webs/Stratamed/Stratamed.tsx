@@ -4,6 +4,7 @@ import Navbar from '../../../common/Navbar/Navbar'
 import Footer from '../../../common/Footer/Footer'
 
 const P = '/assets/img/products/stratamed'
+const A = '/assets/img/webs/stratamed'
 
 export default function Stratamed() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -35,7 +36,7 @@ export default function Stratamed() {
             </h1>
             <div className="sd-hero__actions">
               <img src={`${P}/imagenes stratpharma_Mesa de trabajo 1 copia 5.png`} alt="Stratamed" className="sd-hero__product" style={{ width: '260px', height: 'auto', maxWidth: 'none' }} />
-              <a href="https://www.farmavazquez.com/stratamed-5-g-605796.html" className="sd-hero__btn" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.farmavazquez.com/#63e4/classic/m=and&q=stratamed" className="sd-hero__btn" target="_blank" rel="noopener noreferrer">
                 Compra<br />online
               </a>
             </div>
@@ -55,7 +56,7 @@ export default function Stratamed() {
       </section>
 
       <div className="sd-callout">
-        Apósito flexible y formador de película avanzado para su uso inmediatamente después de los procedimientos médicos y estéticos.
+        Apósito flexible, semioclusivo (misma semioclusividad que la epidermis), estéril, bacteriostático, totalmente transparente, sin un PH medible, ni paralelos, ni alcoholes, ni perfumes y con la indicación exclusiva en heridas abiertas o suturadas.
       </div>
 
       {/* ── PRODUCT ── */}
@@ -66,7 +67,7 @@ export default function Stratamed() {
           </div>
           <div className="sd-product__text">
             <p className="sd-product__intro">
-              Stratamed se ha desarrollado con una consistencia especial para garantizar que permanezca en <strong>pleno contacto</strong> con el lecho de la herida o la superficie dañada.
+              Stratamed se ha desarrollado con una consistencia especial para garantizar que permanezca en <strong>pleno contacto</strong> con el lecho de la herida o la superficie dañada, que no macera.
             </p>
             <div className="sd-product__indications">
               <h3 className="sd-product__ind-title">Indicaciones médicas / procedimientos:</h3>
@@ -77,11 +78,12 @@ export default function Stratamed() {
                 <li>Heridas crónicas (es decir, úlceras venosas, de presión y diabéticas)</li>
                 <li>Quemaduras de 1er y 2do grado SIN EPIDERMIS</li>
                 <li>Tatuaje médico (es decir, después de la reconstrucción mamaria)</li>
+                <li>Epidermolisis bullosa (EBE)</li>
               </ul>
-              <h3 className="sd-product__ind-title">Indicaciones / procedimientos cosméticos:</h3>
+              <h3 className="sd-product__ind-title">Indicaciones / procedimientos:</h3>
               <ul className="sd-product__ind-list">
-                <li>Cirugía cosmética facial (es decir, blefaroplastia, levantamientos, rinoplastia)</li>
-                <li>Cirugía estética corporal (es decir, aumento/reducción de senos, levantamientos, abdominoplastia)</li>
+                <li>Cirugía facial (es decir, blefaroplastia, lifting facial, rinoplastia)</li>
+                <li>Cirugía corporal (es decir, aumento/reducción de senos, levantamientos, abdominoplastia)</li>
                 <li>Eliminación de tatuajes</li>
               </ul>
             </div>
@@ -150,17 +152,20 @@ export default function Stratamed() {
       <section className="sd-beforeafter">
         <div className="sd-beforeafter__inner">
           <h2 className="sd-beforeafter__title">Protección invisible, resultados <strong>visibles</strong></h2>
-          <div className="sd-beforeafter__cols">
-            <div className="sd-beforeafter__col">
-              <span className="sd-beforeafter__tag">Cirugía de Mohs - labio</span>
-              <p>Tratamiento en monoterapia con <strong>Stratamed durante 2 meses.</strong></p>
-            </div>
-            <div className="sd-beforeafter__col">
-              <span className="sd-beforeafter__tag">Incisión lineal - cabeza</span>
-              <p>Tratamiento en monoterapia con <strong>Stratamed durante 2 meses.</strong></p>
+          <div className="sd-beforeafter__case">
+            <span className="sd-beforeafter__tag">Incisión lineal - cabeza</span>
+            <p>Tratamiento en monoterapia con <strong>Stratamed durante 2 meses.</strong></p>
+            <div className="sd-beforeafter__photos">
+              <div className="sd-beforeafter__photo">
+                <img src={`${A}/start-of-treatment-optimized-1.jpg`} alt="Herida al inicio del tratamiento con Stratamed" />
+                <span className="sd-beforeafter__photo-label">Inicio del tratamiento</span>
+              </div>
+              <div className="sd-beforeafter__photo">
+                <img src={`${A}/day-7-optimized-1.jpg`} alt="Herida en el día 7 de tratamiento con Stratamed" />
+                <span className="sd-beforeafter__photo-label">Día 7</span>
+              </div>
             </div>
           </div>
-          <img src={`${P}/antes-despues.png`} className="sd-beforeafter__img" alt="Antes y después con Stratamed" />
         </div>
       </section>
 
@@ -218,7 +223,7 @@ export default function Stratamed() {
                 <span className="sd-buy__title-line">Dónde</span>
                 <span className="sd-buy__title-line sd-buy__title-line--accent">comprar</span>
               </h2>
-              <a href="https://www.farmavazquez.com/stratamed-5-g-605796.html" className="sd-btn sd-btn--lg" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.farmavazquez.com/#63e4/classic/m=and&q=stratamed" className="sd-btn sd-btn--lg" target="_blank" rel="noopener noreferrer">
                 Comprar Online
               </a>
               <p className="sd-buy__note">*Consulte el prospecto de información al paciente</p>
@@ -238,7 +243,7 @@ export default function Stratamed() {
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
             <div className="sd-modal__body">
-              <h2 className="sd-modal__title">Stratamed está indicado para los tipos más comunes de <span>procedimientos médicos y cosméticos:</span></h2>
+              <h2 className="sd-modal__title">Stratamed está indicado para los tipos más comunes de <span>procedimientos médicos:</span></h2>
               <p className="sd-modal__subtitle">Después de los procedimientos médicos, el enfoque principal para los médicos es lograr una rápida epitelización de la piel. Lograr una cicatrización rápida de heridas no solo es clave para prevenir o minimizar la formación anormal de cicatrices, sino también para prevenir infecciones.</p>
 
               <section className="sd-modal__section">
@@ -282,8 +287,8 @@ export default function Stratamed() {
 
               <section className="sd-modal__section sd-modal__section--blue-cards">
                 <h3>Stratamed® — Un avance en la cicatrización de heridas</h3>
-                <div className="sd-modal__blue-card">Stratamed es un apósito avanzado para heridas para su uso inmediatamente después de procedimientos médicos y estéticos, en heridas agudas o crónicas y superficies de piel comprometidas.</div>
-                <div className="sd-modal__blue-card">Está clínicamente probado que Stratamed cura heridas 2 veces más rápido en comparación con el tratamiento estándar* en quemaduras y reduce el tiempo de inactividad.</div>
+                <div className="sd-modal__blue-card">Stratamed es un apósito de última generación para heridas para su uso inmediatamente después de procedimientos médicos, en heridas agudas o crónicas y superficies de piel comprometidas.</div>
+                <div className="sd-modal__blue-card">Está clínicamente probado que Stratamed cura heridas 2 veces más rápido en comparación con el tratamiento estándar*.</div>
                 <div className="sd-modal__blue-card">Stratamed permite que la prevención de cicatrices anormales comience inmediatamente después de la sutura o una vez que se ha producido una herida.</div>
                 <div className="sd-modal__blue-card">Stratamed proporciona un alivio sintomático de la picazón, la sensación de ardor y la incomodidad, reduce el enrojecimiento y la decoloración asociados con la piel dañada.</div>
                 <div className="sd-modal__blue-card">Stratamed es una alternativa viable a los antibióticos tópicos en la prevención de infecciones sin riesgo de dermatitis de contacto.</div>

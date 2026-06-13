@@ -97,7 +97,7 @@ export const productsMap: Record<string, ProductDetailData> = {
       '/assets/img/products/stratamed/imagenes stratpharma_Mesa de trabajo 1 copia 12.png',
       '/assets/img/products/stratamed/12.jpg'
     ],
-    shopUrl: 'https://www.farmavazquez.com/stratamed-5-g-605796.html',
+    shopUrl: 'https://www.farmavazquez.com/#63e4/classic/m=and&q=stratamed',
     infoUrl: '/stratamed/info',
     content: {
       title: 'STRATAMED®',
@@ -116,7 +116,7 @@ export const productsMap: Record<string, ProductDetailData> = {
       '/assets/img/products/stratacel/imagenes stratpharma_Mesa de trabajo 1 copia 10.png',
       '/assets/img/products/stratacel/8.jpg'
     ],
-    shopUrl: 'https://www.farmavazquez.com/stratacel-10-g-601092.html',
+    shopUrl: 'https://www.farmavazquez.com/buscar?controller=search&orderby=position&orderway=desc&search_query=stratacel&submitsearch=Search',
     infoUrl: '/stratacel/info',
     content: {
       title: 'STRATACEL®',
@@ -155,7 +155,7 @@ export const productsMap: Record<string, ProductDetailData> = {
       '/assets/img/products/strataxrt/strataxrt01.jpeg',
       '/assets/img/products/strata-triz/4.jpg'
     ],
-    shopUrl: 'https://www.farmavazquez.com/strataxrt-20-g-601094.html',
+    shopUrl: 'https://www.farmavazquez.com/buscar?controller=search&orderby=position&orderway=desc&search_query=strataxrt&submitsearch=Search',
     infoUrl: '/strataxrt/info',
     content: {
       title: 'STRATAXRT®',

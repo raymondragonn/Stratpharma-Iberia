@@ -20,7 +20,7 @@ const slides = [
   },
   {
     bg: `${A}/stretch-marks-affects-.jpg`,
-    text: 'Los estudios publicados y documentados en revistas médicas demuestran que entre el 65 y 75% de las mujeres embarazadas tratadas con stratamark no han desarrollado ninguna estrías durante el embarazo.',
+    text: 'Los estudios publicados y documentados en revistas médicas demuestran que entre el 65 y 75% de las mujeres embarazadas tratadas con stratamark no han desarrollado ninguna estrías durante el embarazo. El 25 - 30% restante las han desarrollado tan leves, que con 3 meses más de tratamiento las han curado completamente.',
     pos: 'bl',
     small: true
   },
@@ -96,7 +96,7 @@ export default function Stratamark() {
   const [modalOpen, setModalOpen] = useState(false)
 
   useEffect(() => {
-    const t = setInterval(() => setActiveSlide(p => (p + 1) % slides.length), 5000)
+    const t = setInterval(() => setActiveSlide(p => (p + 1) % slides.length), 8000)
     return () => clearInterval(t)
   }, [])
 
@@ -216,7 +216,14 @@ export default function Stratamark() {
               </p>
             </div>
             <div className="sm-ba__imgs">
-              <img src="/assets/img/products/stratamark/23.png" alt="Antes y después del tratamiento con Stratamark" />
+              <div className="sm-ba__photo">
+                <img src={`${A}/BEFORE.jpg`} alt="Antes del tratamiento con Stratamark" />
+                <span className="sm-ba__photo-label">Antes</span>
+              </div>
+              <div className="sm-ba__photo">
+                <img src={`${A}/AFTER.jpg`} alt="Después del tratamiento con Stratamark" />
+                <span className="sm-ba__photo-label">Después</span>
+              </div>
             </div>
           </div>
         </div>
@@ -377,12 +384,12 @@ export default function Stratamark() {
                   <div className="sm-modal__duration-item">
                     <img src="/assets/img/products/stratamark/tube.png" alt="Stratamark 20g" />
                     <strong>Stratamark 20g</strong>
-                    <p>contiene suficiente gel para aproximadamente un mes de tratamiento en las últimas fases del embarazo.</p>
+                    <p>Contiene suficiente gel para aproximadamente un mes de tratamiento en las últimas fases del embarazo.</p>
                   </div>
                   <div className="sm-modal__duration-item">
                     <img src="/assets/img/products/stratamark/50g.png" alt="Stratamark 50g" />
                     <strong>Stratamark 50g</strong>
-                    <p>contiene suficiente gel para aproximadamente dos meses de tratamiento durante el embarazo.</p>
+                    <p>Contiene suficiente gel para aproximadamente dos meses de tratamiento durante el embarazo.</p>
                   </div>
                 </div>
                 <p className="sm-modal__duration-note">Al principio del embarazo o después del parto, un tubo durará más debido a la menor superficie de aplicación.</p>
@@ -418,12 +425,10 @@ export default function Stratamark() {
 
                 <div className="sm-modal__estrias-sub">
                   <h4 className="sm-modal__estrias-title sm-modal__estrias-title--white">Estrías blancas</h4>
-                  <ul className="sm-modal__prevention-list">
-                    <li>Stratamark ha demostrado en ensayos clínicos una mejoría estética de las estrías blancas de alrededor del 70%. La estría de color blanco nos indica que ya lleva tiempo contigo y te aconsejamos lo siguiente:</li>
-                    <li>Acude a una clínica dermatológica de prestigio o estética con profesionales titulados o de tu confianza que traten las estrías blancas con distintos láseres tipo CO2 + Stratamark.</li>
-                    <li>Usar Stratamark acto seguido una vez finalizada la sesión de láser (o procedimiento). Una estría blanca tras la primera sesión de láser se va a volver de un color rojo intenso, eso es normal y con Stratamark en tres días lo tendrás del mismo color de la piel.</li>
-                    <li>El número de sesiones recomendadas con láser CO2 para el tratamiento de las estrías dependerá de lo que tu dermatólogo o médico estético considere oportuno para tu tipo de piel y donde tienes la estría. Sigue siempre sus consejos, pero no dejes de utilizar Stratamark todos los días las 24h tras el procedimiento láser.</li>
-                  </ul>
+                  <p className="sm-modal__prevention-text">Stratamark ha demostrado en ensayos clínicos una mejoría estética de las estrías blancas de alrededor del 70%. La estría de color blanco nos indica que ya lleva tiempo contigo y te aconsejamos lo siguiente:</p>
+                  <p className="sm-modal__prevention-text">Acude a una clínica dermatológica de prestigio o estética con profesionales titulados o de tu confianza que traten las estrías blancas con distintos láseres tipo CO2 + Stratamark.</p>
+                  <p className="sm-modal__prevention-text">Usar Stratamark acto seguido una vez finalizada la sesión de láser (o procedimiento). Una estría blanca tras la primera sesión de láser se va a volver de un color rojo intenso, eso es normal y con Stratamark en tres días lo tendrás del mismo color de la piel.</p>
+                  <p className="sm-modal__prevention-text">El número de sesiones recomendadas con láser CO2 para el tratamiento de las estrías dependerá de lo que tu dermatólogo o médico estético considere oportuno para tu tipo de piel y donde tienes la estría. Sigue siempre sus consejos, pero no dejes de utilizar Stratamark todos los días las 24h tras el procedimiento láser.</p>
                   <img src="/assets/img/products/stratamark/tratamiento-estrias.png" alt="Tratamiento estrías blancas" className="sm-modal__estrias-img" />
                 </div>
               </section>

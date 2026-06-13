@@ -4,11 +4,12 @@ import Navbar from '../../../common/Navbar/Navbar'
 import Footer from '../../../common/Footer/Footer'
 
 const P = '/assets/img/products/stratacel'
+const A = '/assets/img/webs/stratacel'
 
 const slides = [
   {
     bg: `${P}/33.jpg`,
-    title: 'Apósito avanzado para post-procedimiento\ncon láser fraccionados y/o CO2',
+    title: 'Apósito de última generación para post-procedimiento\ncon láser fraccionados y/o CO2',
     sub: '',
     pos: 'tl' as const
   },
@@ -47,7 +48,7 @@ const features = [
         <path d="M9 14c.5 1.5 1.5 2.5 3 2.5s2.5-1 3-2.5"/>
       </svg>
     ),
-    label: 'Apósito para heridas en formato gel'
+    label: 'Apósito para procedimientos post láser'
   },
   {
     icon: (
@@ -96,7 +97,7 @@ export default function Stratacel() {
   const [activeSlide, setActiveSlide] = useState(0)
 
   useEffect(() => {
-    const t = setInterval(() => setActiveSlide(p => (p + 1) % slides.length), 5000)
+    const t = setInterval(() => setActiveSlide(p => (p + 1) % slides.length), 8000)
     return () => clearInterval(t)
   }, [])
 
@@ -189,7 +190,7 @@ export default function Stratacel() {
           <div className="sc-ba__cols">
             <div className="sc-ba__text">
               <h2 className="sc-ba__title">
-                <span className="sc-ba__title-line">Ver para</span>
+                <span className="sc-ba__title-line">Míralo</span>
                 <span className="sc-ba__title-line sc-ba__title-line--accent">Tú mismo</span>
               </h2>
               <p className="sc-ba__caption">
@@ -197,7 +198,14 @@ export default function Stratacel() {
               </p>
             </div>
             <div className="sc-ba__imgs">
-              <img src={`${P}/40.png`} alt="Antes y después del tratamiento con Stratacel" />
+              <div className="sc-ba__photo">
+                <img src={`${A}/before7.jpg`} alt="Antes del tratamiento con Stratacel" />
+                <span className="sc-ba__photo-label">Antes</span>
+              </div>
+              <div className="sc-ba__photo">
+                <img src={`${A}/after7.jpg`} alt="Después del tratamiento con Stratacel" />
+                <span className="sc-ba__photo-label">Después</span>
+              </div>
             </div>
           </div>
         </div>
@@ -248,7 +256,7 @@ export default function Stratacel() {
                 <span className="sc-buy__title-line sc-buy__title-line--accent">comprar</span>
               </h2>
               <p className="sc-buy__lead">Disponible en todas las farmacias de España y Portugal y online</p>
-              <a href="https://www.farmavazquez.com/stratacel-10-g-601092.html" className="sc-btn sc-btn--lg" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.farmavazquez.com/buscar?controller=search&orderby=position&orderway=desc&search_query=stratacel&submitsearch=Search" className="sc-btn sc-btn--lg" target="_blank" rel="noopener noreferrer">
                 Comprar Online
               </a>
             </div>

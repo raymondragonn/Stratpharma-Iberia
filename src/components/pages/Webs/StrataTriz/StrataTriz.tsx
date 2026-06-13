@@ -9,7 +9,7 @@ const slides = [
   {
     bg: `${A}/SD-visual-woman-scar.jpg`,
     title: 'Tratamiento de primera línea\npara las cicatrices',
-    desc: 'Strata-triz se recomiendan como terapia no invasiva de primera línea para la prevención y el tratamiento de cicatrices anormales',
+    desc: 'Strata-triz se recomiendan como terapia no invasiva de primera línea para el tratamiento de cicatrices anormales',
     pos: 'right'
   },
   {
@@ -23,7 +23,7 @@ const slides = [
 const features = [
   'El efecto terapéutico de Strata-triz tiene documentado y registrado una duración de 36 horas.',
   'Suaviza y aplana las cicatrices abultadas',
-  'Ayuda a normalizar el ciclo de síntesis de colágeno',
+  'Normaliza el ciclo de síntesis de colágeno',
   'Adecuado para todas las zonas de la piel, incluidas las zonas expuestas'
 ]
 
@@ -31,7 +31,7 @@ export default function StrataTriz() {
   const [activeSlide, setActiveSlide] = useState(0)
 
   useEffect(() => {
-    const t = setInterval(() => setActiveSlide(p => (p + 1) % slides.length), 5000)
+    const t = setInterval(() => setActiveSlide(p => (p + 1) % slides.length), 8000)
     return () => clearInterval(t)
   }, [])
 
@@ -108,7 +108,7 @@ export default function StrataTriz() {
           <ul className="st-product__list">
             <li>Para el tratamiento de cicatrices anormales, tanto antiguas como nuevas.</li>
             <li>Alivia el picor y las molestias de las cicatrices.</li>
-            <li>Reduce el enrojecimiento y la decoloración asociados a las cicatrices.</li>
+            <li>Reduce el enrojecimiento, la inflamación y la coloración asociados a las cicatrices.</li>
           </ul>
         </div>
       </section>
@@ -174,7 +174,14 @@ export default function StrataTriz() {
               </p>
             </div>
             <div className="st-ba__imgs">
-              <img src="/assets/img/products/strata-triz/28.png" alt="Cicatriz antes y después del tratamiento con Strata-triz" />
+              <div className="st-ba__photo">
+                <img src={`${A}/before-1-300x164.jpg`} alt="Cicatriz antes del tratamiento con Strata-triz" />
+                <span className="st-ba__photo-label">Antes</span>
+              </div>
+              <div className="st-ba__photo">
+                <img src={`${A}/after-4-300x199.jpg`} alt="Cicatriz después del tratamiento con Strata-triz" />
+                <span className="st-ba__photo-label">Después</span>
+              </div>
             </div>
           </div>
         </div>
