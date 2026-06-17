@@ -667,11 +667,33 @@ $trans:   .35s ease;
   }
 
   &__imgs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
     img {
       display: block;
       width: 100%;
       border-radius: 6px;
     }
+  }
+
+  &__photo {
+    text-align: center;
+
+    img {
+      width: 42%;
+      margin: 0 auto;
+    }
+  }
+
+  &__photo-label {
+    display: block;
+    margin-top: .5rem;
+    font-size: .85rem;
+    font-weight: 600;
+    color: $orange;
+    text-align: center;
   }
 
   &__text {

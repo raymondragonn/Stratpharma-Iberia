@@ -296,8 +296,7 @@ export default function Stratamark() {
                 <p>Stratamark es un producto sanitario innovador, específicamente diseñado y clínicamente probado para la prevención y el tratamiento de las estrías (Striae Distensae).</p>
                 <p>Stratamark es el único producto tópico con evidencia clínica probada.</p>
                 <div className="sm-modal__imgs-stack">
-                  <img src="/assets/img/products/stratamark/que-puede-hacer-1.png" alt="Qué puede hacer Stratamark 1" />
-                  <img src="/assets/img/products/stratamark/que-puede-hacer-2.png" alt="Qué puede hacer Stratamark 2" />
+                  <img src="/assets/img/products/stratamark/imagen stratmark gotas.jpg" alt="Qué puede hacer Stratamark" />
                 </div>
               </section>
 

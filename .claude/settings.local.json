@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(lsof -ti:5173)",
+      "Bash(pkill -f \"vite\")",
+      "Bash(npm start *)",
+      "Bash(lsof -iTCP -sTCP:LISTEN)",
+      "Bash(git add *)",
+      "Bash(wait 30176)",
+      "Bash(git rm *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "WebFetch(domain:es.stratatriz.com)",
+      "Bash(npx tsc *)",
+      "Bash(grep -E \"\\\\.\\(tsx|ts|jsx|js\\)$\")"
+    ]
+  }
+}

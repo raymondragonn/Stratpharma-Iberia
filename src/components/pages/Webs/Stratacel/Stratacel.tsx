@@ -80,17 +80,9 @@ const features = [
   }
 ]
 
-const experts = [
-  {
-    quote: 'Imagina que vas a reformar tu casa. El suelo necesita nuevas baldosas, pero antes hay que nivelarlo. Los constructores prometen una solución mágica: cemento autonivelante que hace que cada paso posterior sea algo sencillo. Stratacel actúa de la misma manera.',
-    author: 'Dr. Leonardo Marini, Trieste, Italia',
-    media: { type: 'image' as const, src: `${P}/dr1.png`, alt: 'Dr. Leonardo Marini' }
-  },
-  {
-    quote: 'Stratamed y Stratacel son los primeros agentes oclusivos en película que realmente podemos aplicar sobre las heridas de inmediato, y nunca habíamos tenido eso. Así que incluso si alguien tiene una herida abierta o cerrada con suturas, no tenemos que esperar a que se retiren las suturas.',
-    author: 'Dr. Michael Gold, Nashville, TN, EE. UU.',
-    media: { type: 'video' as const, src: 'https://www.youtube.com/embed/YVAQSqf33oM', alt: 'Dr. Gold habla de los apósitos en formato gel' }
-  }
+const expertVideos = [
+  `${P}/video1-stratacel.mp4`,
+  `${P}/video2-stratacel.mp4`
 ]
 
 export default function Stratacel() {
@@ -215,33 +207,10 @@ export default function Stratacel() {
       <section className="sc-experts">
         <div className="sc-experts__inner">
           <h2 className="sc-experts__title">Opinión de expertos</h2>
-          <div className="sc-experts__grid">
-            {experts.map((e, i) => {
-              const text = (
-                <div className="sc-expert__text">
-                  <blockquote className="sc-expert__quote">{e.quote}</blockquote>
-                  <p className="sc-expert__author">{e.author}</p>
-                </div>
-              )
-              const media = e.media.type === 'image' ? (
-                <img className="sc-expert__photo" src={e.media.src} alt={e.media.alt} />
-              ) : (
-                <div className="sc-expert__video">
-                  <iframe
-                    src={e.media.src}
-                    title={e.media.alt}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  />
-                </div>
-              )
-              return (
-                <div key={i} className="sc-expert">
-                  {i % 2 === 0 ? <>{text}{media}</> : <>{media}{text}</>}
-                </div>
-              )
-            })}
+          <div className="sc-experts__videos">
+            {expertVideos.map((src, i) => (
+              <video key={i} className="sc-experts__video" src={src} controls playsInline />
+            ))}
           </div>
         </div>
       </section>

@@ -201,6 +201,10 @@ export default function StrataTriz() {
           </p>
           <div className="st-results__cols">
             <div className="st-results__imgs">
+              <div className="st-results__photo">
+                <img src="/assets/img/products/strata-triz/50.jpg" alt="Cicatriz antes del tratamiento con Strata-triz" />
+                <span className="st-results__photo-label">Antes</span>
+              </div>
               <img src="/assets/img/products/strata-triz/Captura de pantalla 2026-06-07 a la(s) 6.21.22 p.m..png" alt="Cicatriz al inicio del tratamiento y después de 5 meses con Strata-triz" />
             </div>
             <div className="st-results__text">

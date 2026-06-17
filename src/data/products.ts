@@ -37,35 +37,35 @@ export const productCards: ProductCardData[] = [
     slug: 'strata-triz',
     title: 'Strata-triz®',
     description: 'Gel de silicona para el tratamiento de cicatrices anómalas, hipertróficas y queloides.',
-    imageUrl: '/assets/img/products/strata-triz/strata-triz-portada.png'
+    imageUrl: '/assets/img/products/strata-triz/imagenes stratpharma_Mesa de trabajo 1 copia 3.png'
   },
   {
     id: '4',
     slug: 'stratamark',
     title: 'Stratamark®',
     description: 'Fórmula para la prevención y tratamiento de estrías con evidencia clínica probada.',
-    imageUrl: '/assets/img/products/stratamark/stratamark-portada.png'
+    imageUrl: '/assets/img/products/stratamark/imagenes stratpharma_Mesa de trabajo 1 copia.png'
   },
   {
     id: '2',
     slug: 'stratamed',
     title: 'Stratamed®',
     description: 'Apósito en gel flexible para cuidado postoperatorio y cicatrización óptima de heridas.',
-    imageUrl: '/assets/img/products/stratamed/stratamed-portada.png'
+    imageUrl: '/assets/img/products/stratamed/imagenes stratpharma_Mesa de trabajo 1 copia 5.png'
   },
   {
     id: '3',
     slug: 'stratacel',
     title: 'Stratacel®',
     description: 'Apósito para reparación de piel dañada tras procedimientos con láser y tratamientos estéticos.',
-    imageUrl: '/assets/img/products/stratacel/stratacel-portada.png'
+    imageUrl: '/assets/img/products/stratacel/imagenes stratpharma_Mesa de trabajo 1 copia 10.png'
   },
   {
     id: '5',
     slug: 'strataxrt',
     title: 'StrataXRT®',
     description: 'Gel de silicona para el tratamiento de radiodermitis, apto para heridas abiertas.',
-    imageUrl: '/assets/img/products/strataxrt/strataxrt-portada.png'
+    imageUrl: '/assets/img/products/strataxrt/imagenes stratpharma_Mesa de trabajo 1 copia 8.png'
   }
 ];
 
@@ -76,7 +76,7 @@ export const productsMap: Record<string, ProductDetailData> = {
     thumbnails: [
       '/assets/img/products/strata-triz/imagenes stratpharma_Mesa de trabajo 1 copia 6.png',
       '/assets/img/products/strata-triz/imagenes stratpharma_Mesa de trabajo 1 copia 2.png',
-      '/assets/img/products/strata-triz/4.jpg'
+      '/assets/img/51.jpg'
     ],
     shopUrl: 'https://www.farmavazquez.com/comprar-strata-triz-5962',
     infoUrl: '/strata-triz/info',
@@ -95,7 +95,7 @@ export const productsMap: Record<string, ProductDetailData> = {
       '/assets/img/products/stratamed/imagenes stratpharma_Mesa de trabajo 1 copia 7.png',
       '/assets/img/products/stratamed/imagenes stratpharma_Mesa de trabajo 1 copia 5.png',
       '/assets/img/products/stratamed/imagenes stratpharma_Mesa de trabajo 1 copia 12.png',
-      '/assets/img/products/stratamed/12.jpg'
+      '/assets/img/51.jpg'
     ],
     shopUrl: 'https://www.farmavazquez.com/#63e4/classic/m=and&q=stratamed',
     infoUrl: '/stratamed/info',
@@ -114,7 +114,7 @@ export const productsMap: Record<string, ProductDetailData> = {
     thumbnails: [
       '/assets/img/products/stratacel/imagenes stratpharma_Mesa de trabajo 1 copia 11.png',
       '/assets/img/products/stratacel/imagenes stratpharma_Mesa de trabajo 1 copia 10.png',
-      '/assets/img/products/stratacel/8.jpg'
+      '/assets/img/51.jpg'
     ],
     shopUrl: 'https://www.farmavazquez.com/buscar?controller=search&orderby=position&orderway=desc&search_query=stratacel&submitsearch=Search',
     infoUrl: '/stratacel/info',
@@ -129,13 +129,13 @@ export const productsMap: Record<string, ProductDetailData> = {
     }
   },
   '4': {
-    mainImage: '/assets/img/products/stratamark/stratamark01.jpg',
+    mainImage: '/assets/img/products/stratamark/imagenes stratpharma_Mesa de trabajo 1.png',
     thumbnails: [
-      '/assets/img/products/stratamark/stratamark01.jpg',
-      '/assets/img/products/stratamark/stratamark02.jpg',
-      '/assets/img/products/stratamark/stratamark03.png',
-      '/assets/img/products/stratamark/8.jpg',
-      '/assets/img/products/stratamark/roll-up.png'
+      '/assets/img/products/stratamark/imagenes stratpharma_Mesa de trabajo 1.png',
+      '/assets/img/products/stratamark/imagenes stratpharma.jpg',
+      '/assets/img/products/stratamark/imagenes stratpharma_Mesa de trabajo 1 copia.png',
+      '/assets/img/products/stratamark/roll-up.png',
+      '/assets/img/51.jpg'
     ],
     shopUrl: 'https://www.farmavazquez.com/stratamark-5951',
     infoUrl: '/stratamark/info',
@@ -149,11 +149,11 @@ export const productsMap: Record<string, ProductDetailData> = {
     }
   },
   '5': {
-    mainImage: '/assets/img/products/strataxrt/imgi_44_SX20EX00TubeBoxLowRes.jpg',
+    mainImage: '/assets/img/products/strataxrt/imagenes stratpharma_Mesa de trabajo 1 copia 8.png',
     thumbnails: [
-      '/assets/img/products/strataxrt/imgi_44_SX20EX00TubeBoxLowRes.jpg',
-      '/assets/img/products/strataxrt/strataxrt01.jpeg',
-      '/assets/img/products/strata-triz/4.jpg'
+      '/assets/img/products/strataxrt/imagenes stratpharma_Mesa de trabajo 1 copia 8.png',
+      '/assets/img/products/strataxrt/imagenes stratpharma_Mesa de trabajo 1 copia 9.png',
+      '/assets/img/51.jpg'
     ],
     shopUrl: 'https://www.farmavazquez.com/buscar?controller=search&orderby=position&orderway=desc&search_query=strataxrt&submitsearch=Search',
     infoUrl: '/strataxrt/info',
