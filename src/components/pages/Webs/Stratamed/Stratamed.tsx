@@ -56,7 +56,7 @@ export default function Stratamed() {
       </section>
 
       <div className="sd-callout">
-        Apósito flexible, semioclusivo (misma semioclusividad que la epidermis), estéril, bacteriostático, totalmente transparente, sin un PH medible, ni paralelos, ni alcoholes, ni perfumes y con la indicación exclusiva en heridas abiertas o suturadas.
+        Apósito flexible, semioclusivo (misma semioclusividad que la epidermis), estéril, bacteriostático, totalmente transparente, sin un PH medible, ni parabenos, ni alcoholes, ni perfumes y con la indicación exclusiva en heridas abiertas o suturadas.
       </div>
 
       {/* ── PRODUCT ── */}
@@ -67,7 +67,7 @@ export default function Stratamed() {
           </div>
           <div className="sd-product__text">
             <p className="sd-product__intro">
-              Stratamed se ha desarrollado con una consistencia especial para garantizar que permanezca en <strong>pleno contacto</strong> con el lecho de la herida o la superficie dañada, que no macera.
+              Stratamed se ha desarrollado con una consistencia especial para garantizar que permanezca en <strong>pleno contacto</strong> con el lecho de la herida o la superficie dañada, sin provocar maceración.
             </p>
             <div className="sd-product__indications">
               <h3 className="sd-product__ind-title">Indicaciones médicas / procedimientos:</h3>
